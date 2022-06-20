@@ -5,6 +5,7 @@ import {
   View,
   Image
 } from 'react-native';
+import ErrorComponent from "./ErrorComponent";
 
 const SingleUser = ({ navigation, route }) => {
   const user = route.params.details;
@@ -35,6 +36,12 @@ const SingleUser = ({ navigation, route }) => {
       borderColor:'#181818'
     }
   });
+
+  if (!user) {
+    navigation.replace('Error', { message: 'Sorry, this user does not exists.' });
+    return null;
+  }
+
   return (
     <>
       <View style={styles.container}>

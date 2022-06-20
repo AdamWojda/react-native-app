@@ -14,6 +14,7 @@ import AppContext from './components/AppContext';
 import HomeScreen from './components/HomeScreen';
 import UserList from './components/UserList';
 import SingleUser from './components/SingleUser';
+import ErrorComponent from './components/ErrorComponent';
 
 const App: () => Node = () => {
   const [globalUsers, setGlobalUsers] = useState(false);
@@ -64,6 +65,7 @@ const App: () => Node = () => {
             />
             <Stack.Screen name='UserList' component={UserList} />
             <Stack.Screen name='SingleUser' component={SingleUser} />
+            <Stack.Screen name='Error' component={ErrorComponent} />
           </Stack.Navigator>
       </AppContext.Provider>
     </NavigationContainer>

@@ -15,7 +15,7 @@ const HomeScreen = ({ navigation }) => {
     <Button
       title='Randomize User'
       onPress={() =>
-        navigation.navigate('SingleUser', { details: globalContext.getSingleUser(Math.floor(Math.random() * 200)) })
+        navigation.navigate('SingleUser', { details: globalContext.getSingleUser(Math.floor(Math.random() * 250)) })
       }
     />
   </>
